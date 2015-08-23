@@ -1,8 +1,9 @@
 {-
     H-99 Problems
-    Copyright 2015 (c) Adrian Nwankwo (ARCAED0X)
+    Copyright 2015 (c) Adrian Nwankwo (Arcaed0x)
     Problem     : 7
     Description : Flatten a nested list structure.
+    License     : MIT (See LICENSE file)
 -}
 
 -- | Data Type from example.

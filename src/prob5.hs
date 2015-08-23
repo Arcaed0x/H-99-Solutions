@@ -1,8 +1,9 @@
 {-
     H-99 Problems
-    Copyright 2015 (c) Adrian Nwk (ARCAED0X)
+    Copyright 2015 (c) Adrian Nwankwo (Arcaed0x)
     Problem     : 5
     Description : Reverse a list.
+    License     : MIT (See LICENSE file)
 -}
 
 reverse' :: [a] -> [a]
