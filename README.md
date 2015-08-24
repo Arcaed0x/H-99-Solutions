@@ -10,3 +10,5 @@ The comment located at the top of each solution gives information such as:
   * Problem number
   * Description
   * License reference
+
+**Status** : 8 complete
