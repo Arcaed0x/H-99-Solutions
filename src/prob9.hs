@@ -9,11 +9,11 @@
 -}
 
 sameCongregate :: (Eq a) => [a] -> [[a]]
-sameCongregate []    = []
-sameCongregate lst   = firstAlikeElems : sameCongregate restOfList
-  where restOfList              = drop (length firstAlikeElems) lst
-        firstAlikeElems         = takeAlikeElems lst
-        takeAlikeElems [x]      = [x]
-        takeAlikeElems (x:xs)   = if x == (head xs)
+sameCongregate []  = []
+sameCongregate lst = firstAlikeElems : sameCongregate restOfList
+  where restOfList            = drop (length firstAlikeElems) lst
+        firstAlikeElems       = takeAlikeElems lst
+        takeAlikeElems [x]    = [x]
+        takeAlikeElems (x:xs) = if x == (head xs)
                                   then x : takeAlikeElems xs
                                   else [x]

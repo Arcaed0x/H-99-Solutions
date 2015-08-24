@@ -15,11 +15,11 @@ countAlike l = [(length x, head x) | x <- groupedAlikeList]
   where groupedAlikeList = sameCongregate l
 
 sameCongregate :: (Eq a) => [a] -> [[a]]
-sameCongregate []    = []
-sameCongregate lst   = firstAlikeElems : sameCongregate restOfList
-  where restOfList              = drop (length firstAlikeElems) lst
-        firstAlikeElems         = takeAlikeElems lst
-        takeAlikeElems [x]      = [x]
-        takeAlikeElems (x:xs)   = if x == (head xs)
-                                  then x : takeAlikeElems xs
-                                  else [x]
+sameCongregate []  = []
+sameCongregate lst = firstAlikeElems : sameCongregate restOfList
+  where restOfList            = drop (length firstAlikeElems) lst
+        firstAlikeElems       = takeAlikeElems lst
+        takeAlikeElems [x]    = [x]
+        takeAlikeElems (x:xs) = if x == (head xs)
+                                then x : takeAlikeElems xs
+                                else [x]

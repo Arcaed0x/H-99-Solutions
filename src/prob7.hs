@@ -6,7 +6,7 @@
     License     : MIT (See LICENSE file)
 -}
 
--- | Data Type from example.
+-- | Data type from example.
 data NestedList a = Elem a | List [NestedList a]
 
 flatten :: NestedList a -> [a]
