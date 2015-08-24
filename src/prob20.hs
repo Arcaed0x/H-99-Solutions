@@ -8,5 +8,5 @@
 
 removeAt :: (Eq a)  => Int -> [a] -> (a, [a])
 removeAt n l@(x:xs) = (poppedElem, restOfList)
-  where poppedElem  = head $ drop (n - 1) l
+  where poppedElem  = l !! (n - 1)
         restOfList  = filter (/= poppedElem) l
