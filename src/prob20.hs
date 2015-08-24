@@ -6,7 +6,7 @@
     License     : MIT (See LICENSE file)
 -}
 
-removeAt :: (Eq a) => Int -> [a] -> (a, [a])
+removeAt :: (Eq a)  => Int -> [a] -> (a, [a])
 removeAt n l@(x:xs) = (poppedElem, restOfList)
   where poppedElem  = head $ drop (n - 1) l
         restOfList  = filter (/= poppedElem) l
