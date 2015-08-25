@@ -6,7 +6,9 @@
     License     : MIT (See LICENSE file)
 -}
 
-removeAt :: (Eq a)  => Int -> [a] -> (a, [a])
-removeAt n l@(x:xs) = (poppedElem, restOfList)
-  where poppedElem  = l !! (n - 1)
-        restOfList  = filter (/= poppedElem) l
+removeAt :: Int -> [a] -> (a, [a])
+removeAt n l = (poppedElem, refinedList)
+  where zeroedIndex     = n - 1
+        poppedElem      = l !! zeroedIndex
+        (preFx, sufFx)  = (\(x,y) -> (x, tail y)) $ splitAt zeroedIndex l
+        refinedList     = preFx ++ sufFx
