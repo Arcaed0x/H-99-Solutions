@@ -7,8 +7,6 @@
 -}
 
 removeAt :: Int -> [a] -> (a, [a])
-removeAt n l = (poppedElem, refinedList)
-  where zeroedIndex     = n - 1
-        poppedElem      = l !! zeroedIndex
-        (preFx, sufFx)  = (\(x,y) -> (x, tail y)) $ splitAt zeroedIndex l
-        refinedList     = preFx ++ sufFx
+removeAt n l = (poppedElem, preFx ++ sufFx)
+  where poppedElem      = l !! (n - 1)
+        (preFx, sufFx)  = (\(x,y) -> (x, tail y)) $ splitAt (n - 1) l
